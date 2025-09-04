@@ -48,80 +48,15 @@ The project implements a **decision-making BI solution** with the following comp
 
 ## 🧭 Architecture Overview
 
-### Mermaid Flowchart (Rendered by GitHub)
-```mermaid
-flowchart TD
-    A[Google Forms/Sheets] -->|ETL (SSIS/Python)| B[Data Warehouse (SQL Server/Azure SQL)]
-    B --> C[Looker Studio Dashboard]
-    B --> D[MVC Web App (Prototype)]
+![Architecture Diagram](Images/architecture.png)
+
+---
+
+## 📐 Data Warehouse Schema
+
+![Star Schema Diagram](Images/diagram.png)
+
 ---
 
 ## 📂 Project Structure
 
-```
-## 🧭 Architecture Overview
-
-![Architecture Diagram](Images/architecture.png)
-.
-├─ data/                # Synthetic demo data
-├─ src/
-│  ├─ db/schema/        # SQL star schema (DDL + seeds)
-│  ├─ etl/              # ETL scripts (Python + SSIS placeholder)
-│  └─ web/              # MVC + API placeholders
-├─ dashboards/          # Dashboard spec + screenshots
-├─ docs/                # Architecture + schema documentation
-└─ notebooks/           # Example analysis in Jupyter
-```
-
----
-
-## ⚙️ Quickstart (Demo with Python + SQLite)
-```bash
-# Clone repo
-git clone https://github.com/<your-username>/manufacturing-defect-analytics.git
-cd manufacturing-defect-analytics
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run ETL (loads sample data into SQLite)
-python src/etl/python/sheets_to_sql.py --preview
-```
-
----
-
-## 📊 Example Dashboard (Looker Studio)
-📌 Add screenshots in `/docs/images/` (make sure to anonymize).  
-- KPI cards for defects & defect rates.  
-- Bar charts for top lines and defect types.  
-- Time series of defect rates.  
-- Drilldowns by reporter and shift.  
-
----
-
-## 🏆 Results & Impact
-- **Centralized data warehouse** for defect reporting.  
-- **Automated ETL** reduced manual data preparation.  
-- **Dashboards** enabled managers to quickly identify high-risk lines and recurring defects.  
-- Improved **decision-making** with reliable KPIs.
-
----
-
-## 🔮 Future Improvements
-- Add **predictive analytics** (ML model to forecast defect probability).  
-- Integrate **natural language queries** for easier exploration.  
-- Enhance **web interface** with role-based access.
-
----
-
-## 🛠️ Tech Stack
-- **ETL**: SSIS (demo in Python/SQLite)  
-- **Database**: SQL Server / Azure SQL (demo in SQLite)  
-- **Visualization**: Looker Studio (specs provided)  
-- **Web App**: PHP (XAMPP MVC prototype)  
-- **Languages**: SQL, Python
-
----
-
-## 📝 License
-This project is under the MIT License.
