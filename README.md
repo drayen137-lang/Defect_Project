@@ -54,11 +54,14 @@ flowchart TD
     A[Google Forms/Sheets] -->|ETL (SSIS/Python)| B[Data Warehouse (SQL Server/Azure SQL)]
     B --> C[Looker Studio Dashboard]
     B --> D[MVC Web App (Prototype)]
-
 ---
 
 ## 📂 Project Structure
+
 ```
+## 🧭 Architecture Overview
+
+![Architecture Diagram](Images/architecture.png)
 .
 ├─ data/                # Synthetic demo data
 ├─ src/
