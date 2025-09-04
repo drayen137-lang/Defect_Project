@@ -1,53 +1,59 @@
 # Manufacturing Defect Analytics – Data Warehouse & Dashboard
 
-This project is an anonymized adaptation of my **Final Year Project (PFE)**:  
-**“Development of a Decision-Making Solution for Defective Parts Analysis”**.  
+![License](https://img.shields.io/badge/License-MIT-green)
+![Tech](https://img.shields.io/badge/ETL-SSIS%20%7C%20Python-blue)
+![Database](https://img.shields.io/badge/Database-SQL%20Server%20%7C%20SQLite-orange)
+![Dashboard](https://img.shields.io/badge/BI-Looker%20Studio-purple)
 
-It showcases my ability to design and implement a **full Business Intelligence pipeline** using the **Kimball methodology**, from data collection to visualization.
+This project is an anonymized adaptation of my **Final Year Project (PFE)**:  
+**“Development of a Decision-Making Solution for Defective Parts Analysis”**  
+
+It demonstrates my ability to design and implement a **full Business Intelligence pipeline** using the **Kimball methodology**, from data collection to visualization.
 
 ---
 
 ## 🚀 Problem Statement
 In manufacturing, detecting and analyzing defective parts is essential to ensure product quality and reduce costs.  
 Before this project, defect data was collected manually and scattered, making it difficult to:
-- Identify recurring issues across production lines.
-- Monitor defect trends over time.
-- Provide actionable KPIs for managers.
+
+- Identify recurring issues across production lines  
+- Monitor defect trends over time  
+- Provide actionable KPIs for managers  
 
 ---
 
 ## 💡 Solution
-I designed and implemented a **decision-making BI solution** with the following components:
+The project implements a **decision-making BI solution** with the following components:
 
-1. **Data Source**: Operators enter defect reports through **Google Forms/Sheets**.
+1. **Data Source**: Operators enter defect reports via **Google Forms/Sheets**  
 2. **ETL Pipeline**:  
-   - Built in **SSIS** (SQL Server Integration Services).  
-   - Extracts raw form data, cleans it, and loads it into the warehouse.  
-   - Demo version provided in Python (safe, synthetic).
+   - Built in **SSIS** (SQL Server Integration Services)  
+   - Extracts raw form data, cleans it, and loads it into the warehouse  
+   - Demo version in **Python/SQLite** (synthetic data)  
 3. **Data Warehouse**:  
-   - Modeled with the **Kimball star schema**.  
-   - Central fact table: `FaitDefaults` (defect events).  
-   - Dimensions: Date, Line, Workstation, Defect Type, Reporter.
+   - Modeled with **Kimball star schema**  
+   - **Fact table**: `FaitDefaults` (defect events)  
+   - **Dimensions**: Date, Line, Workstation, Defect Type, Reporter  
 4. **Visualization**:  
-   - Built dashboards in **Looker Studio** with KPIs:  
-     - Total Defects, Defect Rate %  
+   - Dashboards in **Looker Studio** with KPIs:  
+     - Total Defects & Defect Rate %  
      - Top 5 Lines by Defects  
      - Top 5 Defect Types  
      - Trends over time  
-     - Reporter/Shift analysis
-5. **Web Layer** (Optional):  
-   - MVC prototype with XAMPP to view KPIs in a simple web interface.
+     - Reporter/Shift analysis  
+5. **Web Layer (Optional)**:  
+   - MVC prototype using **XAMPP** to view KPIs in a simple web interface  
 
 ---
 
 ## 🧭 Architecture Overview
+
+### Mermaid Flowchart (Rendered by GitHub)
 ```mermaid
 flowchart TD
     A[Google Forms/Sheets] -->|ETL (SSIS/Python)| B[Data Warehouse (SQL Server/Azure SQL)]
     B --> C[Looker Studio Dashboard]
     B --> D[MVC Web App (Prototype)]
-
-```
 
 ---
 
