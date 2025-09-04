@@ -1,0 +1,36 @@
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.sqlite
+*.db
+warehouse.db
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS / Editors
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Node (if used later)
+node_modules/
+
+# SSIS / Secrets (protect yourself)
+*.dtsx.user
+*.ispac
+*.dtproj.user
+*.dtproj
+*.suo
+*.bak
+*.rdl.data
+*.rdl
+*.snk
