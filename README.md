@@ -46,17 +46,14 @@ The project implements a **decision-making BI solution** with the following comp
 
 ---
 
-## 🧭 Architecture Overview
+## 🧭 Architecture & Data Model
 
-![Architecture Diagram](Images/architecture.png)
+### Architecture Diagram
+![Architecture Diagram](Images/Diagram.png)
 
----
-
-## 📐 Data Warehouse Schema
-
-![Star Schema Diagram](Images/diagram.png)
+### Data Warehouse Star Schema
+![Star Schema Diagram](Images/Model.png)
 
 ---
 
 ## 📂 Project Structure
-
