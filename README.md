@@ -42,10 +42,7 @@ I designed and implemented a **decision-making BI solution** with the following 
 
 ## 🧭 Architecture Overview
 ```mermaid
-flowchart TD
-    A[Google Forms/Sheets] -->|ETL (SSIS/Python)| B[Data Warehouse (SQL Server/Azure SQL)]
-    B --> C[Looker Studio Dashboard]
-    B --> D[MVC Web App (Prototype)]
+<img src="Images/Diagram.png" width="600"/>
 ```
 
 ---
